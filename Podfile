@@ -3,6 +3,7 @@
 
 target 'ChatMessenger' do
   pod 'JSQMessagesViewController', '~> 7.1'
+  pod 'JSQSystemSoundPlayer'
 end
 
 target 'ChatMessengerTests' do

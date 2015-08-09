@@ -10,11 +10,12 @@
 		1661CD085F2CD5111EA6D5F3 /* libPods-ChatMessenger.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA0963D0E8A4C452C8855CA9 /* libPods-ChatMessenger.a */; };
 		BD7983371B77FA8300871770 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BD7983361B77FA8300871770 /* main.m */; };
 		BD79833A1B77FA8300871770 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BD7983391B77FA8300871770 /* AppDelegate.m */; };
-		BD79833D1B77FA8300871770 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD79833C1B77FA8300871770 /* ViewController.m */; };
 		BD7983401B77FA8300871770 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD79833E1B77FA8300871770 /* Main.storyboard */; };
 		BD7983421B77FA8300871770 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD7983411B77FA8300871770 /* Images.xcassets */; };
 		BD7983451B77FA8300871770 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD7983431B77FA8300871770 /* LaunchScreen.xib */; };
 		BD7983511B77FA8300871770 /* ChatMessengerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD7983501B77FA8300871770 /* ChatMessengerTests.m */; };
+		BD79835C1B77FF9800871770 /* MessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD79835B1B77FF9800871770 /* MessagesViewController.m */; };
+		BD79835F1B78050500871770 /* DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BD79835E1B78050500871770 /* DataModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,14 +35,16 @@
 		BD7983361B77FA8300871770 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BD7983381B77FA8300871770 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BD7983391B77FA8300871770 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BD79833B1B77FA8300871770 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		BD79833C1B77FA8300871770 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		BD79833F1B77FA8300871770 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BD7983411B77FA8300871770 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BD7983441B77FA8300871770 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		BD79834A1B77FA8300871770 /* ChatMessengerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatMessengerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD79834F1B77FA8300871770 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD7983501B77FA8300871770 /* ChatMessengerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatMessengerTests.m; sourceTree = "<group>"; };
+		BD79835A1B77FF9800871770 /* MessagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagesViewController.h; sourceTree = "<group>"; };
+		BD79835B1B77FF9800871770 /* MessagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagesViewController.m; sourceTree = "<group>"; };
+		BD79835D1B78050500871770 /* DataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModel.h; sourceTree = "<group>"; };
+		BD79835E1B78050500871770 /* DataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataModel.m; sourceTree = "<group>"; };
 		F8D5A1CD2234B3653AFFF61E /* Pods-ChatMessenger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatMessenger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChatMessenger/Pods-ChatMessenger.debug.xcconfig"; sourceTree = "<group>"; };
 		FA0963D0E8A4C452C8855CA9 /* libPods-ChatMessenger.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChatMessenger.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -105,13 +108,9 @@
 		BD7983331B77FA8300871770 /* ChatMessenger */ = {
 			isa = PBXGroup;
 			children = (
-				BD7983381B77FA8300871770 /* AppDelegate.h */,
-				BD7983391B77FA8300871770 /* AppDelegate.m */,
-				BD79833B1B77FA8300871770 /* ViewController.h */,
-				BD79833C1B77FA8300871770 /* ViewController.m */,
-				BD79833E1B77FA8300871770 /* Main.storyboard */,
-				BD7983411B77FA8300871770 /* Images.xcassets */,
-				BD7983431B77FA8300871770 /* LaunchScreen.xib */,
+				BD7983601B78050C00871770 /* Model */,
+				BD7983611B78051C00871770 /* View */,
+				BD7983621B78053A00871770 /* Controller */,
 				BD7983341B77FA8300871770 /* Supporting Files */,
 			);
 			path = ChatMessenger;
@@ -120,6 +119,8 @@
 		BD7983341B77FA8300871770 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BD7983381B77FA8300871770 /* AppDelegate.h */,
+				BD7983391B77FA8300871770 /* AppDelegate.m */,
 				BD7983351B77FA8300871770 /* Info.plist */,
 				BD7983361B77FA8300871770 /* main.m */,
 			);
@@ -141,6 +142,34 @@
 				BD79834F1B77FA8300871770 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BD7983601B78050C00871770 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BD79835D1B78050500871770 /* DataModel.h */,
+				BD79835E1B78050500871770 /* DataModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		BD7983611B78051C00871770 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BD79833E1B77FA8300871770 /* Main.storyboard */,
+				BD7983411B77FA8300871770 /* Images.xcassets */,
+				BD7983431B77FA8300871770 /* LaunchScreen.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		BD7983621B78053A00871770 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BD79835A1B77FF9800871770 /* MessagesViewController.h */,
+				BD79835B1B77FF9800871770 /* MessagesViewController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,8 +307,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD79833D1B77FA8300871770 /* ViewController.m in Sources */,
+				BD79835F1B78050500871770 /* DataModel.m in Sources */,
 				BD79833A1B77FA8300871770 /* AppDelegate.m in Sources */,
+				BD79835C1B77FF9800871770 /* MessagesViewController.m in Sources */,
 				BD7983371B77FA8300871770 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
