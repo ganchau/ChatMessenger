@@ -7,7 +7,10 @@
 //
 
 #import "JSQMessagesViewController.h"
+#import "DataModel.h"
 
 @interface MessagesViewController : JSQMessagesViewController
+
+@property (strong, nonatomic) DataModel *data;
 
 @end
