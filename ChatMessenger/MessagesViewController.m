@@ -34,6 +34,20 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    // This button will call the `didPressAccessoryButton:` selector on your JSQMessagesViewController subclass
+    self.inputToolbar.contentView.leftBarButtonItem = nil; /* custom button or nil to remove */
+    
+//    // This button will call the `didPressSendButton:` selector on your JSQMessagesViewController subclass
+//    self.inputToolbar.contentView.rightBarButtonItem = /* custom button or nil to remove */
+//    
+//    // Swap buttons, move send button to the LEFT side and the attachment button to the RIGHT
+//    // For RTL language support
+//    self.inputToolbar.contentView.leftBarButtonItem = [JSQMessagesToolbarButtonFactory defaultSendButtonItem];
+//    self.inputToolbar.contentView.rightBarButtonItem = [JSQMessagesToolbarButtonFactory defaultAccessoryButtonItem];
+//    
+//    // The library will call the correct selector for each button, based on this value
+//    self.inputToolbar.sendButtonOnRight = NO;
+    
     self.title = @"Chat Messenger";
     
     /**
@@ -64,7 +78,6 @@
      */
 //    [JSQMessagesCollectionViewCell registerMenuAction:@selector(customAction:)];
 //    [UIMenuController sharedMenuController].menuItems = @[ [[UIMenuItem alloc] initWithTitle:@"Custom Action" action:@selector(customAction:)] ];
-    
     
     /**
      *  Customize your toolbar buttons
@@ -266,36 +279,36 @@
 
 #pragma mark - Custom menu items
 
-- (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender
-{
-    if (action == @selector(customAction:)) {
-        return YES;
-    }
-    
-    return [super collectionView:collectionView canPerformAction:action forItemAtIndexPath:indexPath withSender:sender];
-}
-
-- (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender
-{
-    if (action == @selector(customAction:)) {
-        [self customAction:sender];
-        return;
-    }
-    
-    [super collectionView:collectionView performAction:action forItemAtIndexPath:indexPath withSender:sender];
-}
-
-- (void)customAction:(id)sender
-{
-    NSLog(@"Custom action received! Sender: %@", sender);
-    
-    [[[UIAlertView alloc] initWithTitle:@"Custom Action"
-                                message:nil
-                               delegate:nil
-                      cancelButtonTitle:@"OK"
-                      otherButtonTitles:nil]
-     show];
-}
+//- (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender
+//{
+//    if (action == @selector(customAction:)) {
+//        return YES;
+//    }
+//    
+//    return [super collectionView:collectionView canPerformAction:action forItemAtIndexPath:indexPath withSender:sender];
+//}
+//
+//- (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender
+//{
+//    if (action == @selector(customAction:)) {
+//        [self customAction:sender];
+//        return;
+//    }
+//    
+//    [super collectionView:collectionView performAction:action forItemAtIndexPath:indexPath withSender:sender];
+//}
+//
+//- (void)customAction:(id)sender
+//{
+//    NSLog(@"Custom action received! Sender: %@", sender);
+//    
+//    [[[UIAlertView alloc] initWithTitle:@"Custom Action"
+//                                message:nil
+//                               delegate:nil
+//                      cancelButtonTitle:@"OK"
+//                      otherButtonTitles:nil]
+//     show];
+//}
 
 #pragma mark - JSQMessages collection view flow layout delegate
 
